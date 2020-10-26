@@ -8,10 +8,10 @@
         Title="Simple Data Binding" Height="200" Width="150">
     <StackPanel Margin="10">
         <Label Content="Escriba algo:" Margin="8,0"></Label>
-        <TextBox TextChanged="textoTextBox_TextChanged" x:Name="textoTextBox" Margin="8,4"></TextBox>
+        <TextBox x:Name="textoTextBox" Margin="8,4"/>
         <WrapPanel Orientation="Vertical" Margin="10">
             <TextBlock Text="Texto escrito" Margin="8"></TextBlock>
-            <TextBlock x:Name="textoTextBlock" FontStyle="Italic" HorizontalAlignment="Center" Margin="8"></TextBlock>
+            <TextBlock x:Name="textoTextBlock" FontStyle="Italic" HorizontalAlignment="Center" Margin="8" Text="{Binding ElementName=textoTextBox, Path=Text}"></TextBlock>
         </WrapPanel>
     </StackPanel>
 
